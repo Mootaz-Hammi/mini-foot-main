@@ -1,0 +1,42 @@
+.hero{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+.the-best{
+    margin-top: 4rem;
+    background-color: rgb(21, 141, 47);
+    color: white;
+    border-radius: 4rem;
+    width: fit-content;
+    padding: 20px 13px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.the-best>div{
+    position: absolute;
+    background-color: orange;
+    width: 5.4rem;
+    height: 80%;
+    left: 8px;
+    border-radius: 3rem;
+}
+.the-best>span{
+    z-index: 2;
+}
+
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-overflow: inherit;
+    margin-left: 20px;
+}

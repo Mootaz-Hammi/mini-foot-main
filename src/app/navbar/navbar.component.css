@@ -1,0 +1,15 @@
+.navbar a{
+    text-align: right;
+}
+.navbar a:hover{
+    color: rgb(1, 63, 1);
+}
+.navbar-nav{
+    gap: 0.8rem;
+    margin-left: 5rem;
+    
+    
+}
+.logo{
+    margin-left: 1rem;
+}
