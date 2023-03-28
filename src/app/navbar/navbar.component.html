@@ -1,19 +1,20 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light"  [class.fixed]="isFixedNavbar">
     
       <a class="navbar-brand">
         <img src="assets/logo.png" alt="" width="200"  class="d-inline-block align-top logo"> 
       </a>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="collapse navbar-collapse" id="navbar">
         <div class="navbar-nav col-10 ml-auto">
           <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
           <a class="nav-item nav-link" routerLink="training" routerLinkActive="active">Training</a>
           <a class="nav-item nav-link" routerLink="elite" routerLinkActive="active">Elites</a>
           <a class="nav-item nav-link " routerLink="events" routerLinkActive="active">Events</a>
+          
+            <button class="btn btn-success text-right btnnav" routerLink="starter">Get Starter</button>
+            
+            
         </div>
-        <div class="text-right col-2">
-        <button class="btn btn-success text-right" routerLink="starter">Get Starter</button>
         
-        </div>
       
     </div>
   </nav>

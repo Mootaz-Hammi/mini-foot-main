@@ -1,7 +1,17 @@
+:root{
+    --lightgray:#D9D9D9;
+    --gray : #9c9c9c;
+    --orange: #f48915;
+    --planCard: Linear-gradient(210.41deg, #fa5042 1.14%, #ffa739 100.75%);
+    --appColor: #5e6269;
+}
+.gardient{
+    background-color: Linear-gradient(210.41deg, #fa5042 1.14%, #ffa739 100.75%);  
+}
 .hero{
     display: flex;
     justify-content: space-between;
-    margin-left: 20px;
+    margin-left: 70px;
 }
 .the-best{
     margin-top: 4rem;
@@ -32,11 +42,114 @@
 .hero-text{
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
     text-transform: uppercase;
     font-size: 4.5rem;
     font-weight: bold;
-    color: rgb(0, 0, 0);
+    color:rgb(44, 44, 44);
     text-overflow: inherit;
-    margin-left: 20px;
+    margin-left: 70px;
+    
 }
+.stroke-text{
+    color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(10, 10, 10);
+}
+.hero-text>div:nth-of-type(3){
+    font-size: 1rem;  
+    color: black;
+    text-transform: none;
+    font-weight: 200;
+    letter-spacing: 1px;
+    width: 80%;
+}
+.figures{
+    margin-top: 2rem;
+    font-size: 1rem;
+    display: flex;
+    gap: 2rem;
+}
+.figures>div{
+    display: flex;
+    flex-direction: column;
+    
+}
+.figures>div>span:nth-of-type(1){
+    color: green;
+    font-size: 2rem;
+}
+.figures>div>span:nth-of-type(2){
+    color: orange;
+    font-size: 2rem;
+    text-transform: none;
+    
+}
+
+.right-h{
+    flex: 1;
+    position: relative;
+    
+}
+.pic{
+    position: relative;
+    top: 4rem;
+    right: 15rem;
+    widows: 23rem;
+    width: 70rem;
+}
+
+.programs{
+    margin-top: 2rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+     
+}
+.programs-header{
+    gap: 9rem;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.program-categories{
+    display: flex;
+    gap: 7rem;
+    justify-content: center;
+    margin-top: 1rem;
+    
+}
+.category:hover{
+    background-color: black;
+    
+}
+.category{
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    padding: 4rem;
+    gap: 2rem;
+    color: white;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    cursor: pointer;
+    
+}
+.category>:nth-child(1){
+    font-size: 2rem;
+    color: orange;
+    text-align: center;
+}
+.category>:nth-child(2){
+    font-size: 2rem;
+    color: white;
+}
+.category>:nth-child(3){
+    font-size: 20px;
+    color: white;
+}
+

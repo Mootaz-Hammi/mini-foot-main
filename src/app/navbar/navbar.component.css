@@ -13,3 +13,19 @@
 .logo{
     margin-left: 1rem;
 }
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+nav.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+.btnnav{
+    margin-left: 50rem;
+    
+}

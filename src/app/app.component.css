@@ -1,0 +1,27 @@
+:root{
+    --lightgray:#D9D9D9;
+    --gray : #9c9c9c;
+    --orange: #f48915;
+    --planCard: Linear-gradient(210.41deg,#f5f5f5);
+    --appColor: #3c3f45;
+}
+
+.App{
+    background-color: #3c3f45;
+    mix-blend-mode: overlay;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.stroke-text{
+    color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}

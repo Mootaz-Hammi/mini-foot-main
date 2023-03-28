@@ -1,17 +1,74 @@
-<div class="hero">
-    <div class="the-best">
-        <div></div>
-        <span>Football Academy for all levels</span>
+<div class="container mw-100">
+<div class="row">
+    <div class="col-7">
+            <div class="hero">
+            <div class="the-best">
+                <div></div>
+                <span>Football Academy for all levels</span>
+            </div>
+        </div>
+            <div class="hero-text">
+                <div>
+                    <span>Welcome</span> 
+                    <span></span>
+                </div>
+                <div>
+                    <span class="stroke-text">To OUR</span>
+                    <span>
+                        Academy
+                    </span>
+                </div>
+                <div>
+                <span> Our Academy est une académie tunisienne 
+                    de football située à Tunis (Mhamdia, Fouchena).
+                    Nous accueillons des joueurs âgés de 4 à 23 ans
+                    qui cherchent à se former .
+                    Nous offrons un programme complet qui allie études
+                    et sports pour une formation complète et
+                    intégrale des joueurs du futur.
+                </span>
+                </div>
+            
+            <div class="figures">
+                <div *ngFor="let figure of figures">
+                    <span>+ {{figure.num}}</span>
+                    <span>{{figure.title}}</span>
+                </div>
+            </div>   
+            <div>
+                <button class="btn btn-success" routerLink="starter">Get Started</button>  
+            </div>
+            
+        </div><!--col left-->
+
+</div>
+    <div class="col-5">
+        <div class="right-h">
+        <img class="pic"src="assets/logo.png" alt="">
+    </div>
+    </div><!--col right-->
+</div><!--row-->
+</div><!--container-->
+
+<div class="programs">
+    <div class="programs-header">
+    <span class="stroke-text">Explore Our</span>
+    <span> Programs</span>
+    <span class="stroke-text"> to shape you</span>
+</div><!--programs header-->
+
+<div class="program-categories">
+    <div *ngFor="let program of programs">
+        <div class="category gardient">
+           <span> {{program.icon}}</span>
+            <span>{{program.title}}</span>
+            <span>{{program.desc}}</span>
+            
+            
+        </div>
     </div>
 </div>
-    <div class="hero-text">
-        <div>
-            <span>Shape</span> 
-            <span> your</span>
-        </div>
-        <div>
-            <span>ideal body</span>
-            <div>testing</div>
-        </div>
-    </div>
+</div><!--programs-->
+
+    
 
