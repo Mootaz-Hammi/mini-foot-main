@@ -16,9 +16,9 @@ export class HomeComponent {
 
   programs=
   [
-    {icon:60,title:"Strength Training",desc:"description1"},
-    {icon:70,title:"Strength Training",desc:"description2"},
-    {icon:80,title:"Strength Training",desc:"description3"},
-    {icon:60,title:"Strength Training",desc:"description1"}
+    {icon:"assets/control.png",title:"Force",desc:"description2description2description2descrip"},
+    {icon:"assets/control.png",title:"Strength Training",desc:"description2description2description2descrip"},
+    {icon:"assets/control.png",title:"Strength Training",desc:"description2description2description2descrip"},
+    {icon:"assets/control.png",title:"Strength Training",desc:"description2description2description2descrip"}
   ]
 }
