@@ -141,6 +141,7 @@
     
 }
 
+
 .category>:nth-child(1){
     
     fill: white;
@@ -159,23 +160,25 @@
     line-height:35px;
     word-wrap: break-word;
     font-family:'Times New Roman', Times, serif;
-    
-
-    
-
 }
 
+.pack{
+    margin-top: 3rem;
+}
 .pack-header{
     gap: 8rem;
     justify-content: center;
     display: flex;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 3rem;  
     
 }
 .combo{
     margin-left: 12px;
+    object-fit: cover;
+    height: 25rem;
+    
 }
 .twopic{
     display: flex;  
@@ -187,7 +190,7 @@
     text-transform: uppercase;
 }
 .raisons{
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 .theraisons{
     color: rgb(54, 54, 54);
@@ -216,4 +219,6 @@
 .partner>img{
      margin-left: 2rem;
 }
-
+.allraison{
+    height: 25rem;
+}
