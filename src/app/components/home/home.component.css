@@ -87,16 +87,24 @@
 }
 
 .right-h{
-    flex: 1;
-    position: relative;
+    
+    width: 5rem;
+    height: 5rem;  
+    position: absolute;
+    
+    
     
 }
+
 .pic{
-    position: relative;
+   
     top: 4rem;
-    right: 12rem;
-    widows: 23rem;
-    width: 70rem;
+    width: auto;
+    max-width: 70rem;
+}
+.picright{
+    position: relative;
+    background-size: cover; 
     
 }
 
