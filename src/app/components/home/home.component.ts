@@ -21,4 +21,10 @@ export class HomeComponent {
     {icon:"assets/control.png",title:"Strength Training",desc:"description2description2description2descrip"},
     {icon:"assets/control.png",title:"Strength Training",desc:"description2description2description2descrip"}
   ]
+
+  cards = [
+    {icon:"assets/control.png",type:"normal training",prix:"40 DT",nbrheure:"4 heures(1 mois)",offre1:"consultation gratuite",offre2:"access to the community"},
+    {icon:"assets/control.png",type:"normal training",prix:"40 DT",nbrheure:"4 heures(1 mois)",offre1:"consultation gratuite",offre2:"access to the community"},
+    {icon:"assets/control.png",type:"normal training",prix:"40 DT",nbrheure:"4 heures(1 mois)",offre1:"consultation gratuite",offre2:"access to the community"}
+  ]
 }

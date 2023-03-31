@@ -43,7 +43,7 @@
         </div><!--col left-->
 
 </div>
-    <div style="background-image: url(../../../assets/logo.png);background-position: center;background-size: 76rem; background-repeat: no-repeat;" class="col-5  picright">
+    <div class="col-5 picright float-right">
         
         <!-- <img class="pic border" src="assets/logo.png" alt=""> -->
         <!-- <img class="pic border" src="assets/top.jpg" alt=""> -->
@@ -118,8 +118,25 @@
         <span> ready to Start</span>
         <span class="stroke-text"> training</span>
         <span> with us now</span>
-    </div>
-</div>
+    </div><!--packheader-->
+    <div class="packcard">
+        
+            <div class="cards" *ngFor="let card of cards">
+                <div class="card-content">
+                   <img width="10%" [src]="card.icon" alt="">
+                   <span>{{card.type}}</span>
+                   <span>{{card.prix}}</span>
+                   <!-- <div class="offre"> -->
+                   <span>{{card.offre1}}</span> 
+                   <span>{{card.offre2}}</span>
+                   <span>{{card.offre1}}</span> 
+                   <span>{{card.offre2}}</span>
+                <!-- </div> -->
+                </div>
+            </div>
+        
+    </div><!--packcard-->
+</div><!--pack-->
 
 </div><!--container-->
 
