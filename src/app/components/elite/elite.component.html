@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mw-100">
 <div class="form-group">
     <label for="exampleFormControlSelect1">categorie</label>
     <select [(ngModel)]="selectedCategorie" class="form-control" id="exampleFormControlSelect1" >
@@ -19,8 +19,9 @@
               <div class="col-6 mt-3">
               <span>  Name : {{ player.name | uppercase}}</span><br>
               <span>  categorie : {{ player.categorie | uppercase }}</span>
-              </div></div>
-          </div> 
+              </div>
+            </div><!--div row -->
+          </div> <!--div col-->
           <div class="col-6">
               <div class="row">
                   <div class="col-3">
@@ -29,8 +30,10 @@
                   <div class="col-6 mt-3">
                   <span>  Name : {{ player.name | uppercase }}</span><br>
                   <span>  position : {{ player.categorie | uppercase }}</span>
-                  </div></div></div>
-          </div>
+                  </div>
+                </div>
+              </div><!--div col-->
+          </div><!--div row-->
         </li>
       </ul>
     </div>
