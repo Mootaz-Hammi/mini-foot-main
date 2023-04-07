@@ -23,8 +23,8 @@ export class HomeComponent {
   ]
 
   cards = [
-    {icon:"assets/control.png",type:"normal training",prix:"40 DT",nbrheure:"4 heures(1 mois)",offre1:"consultation gratuite",offre2:"access to the community"},
-    {icon:"assets/control.png",type:"normal training",prix:"40 DT",nbrheure:"4 heures(1 mois)",offre1:"consultation gratuite",offre2:"access to the community"},
-    {icon:"assets/control.png",type:"normal training",prix:"40 DT",nbrheure:"4 heures(1 mois)",offre1:"consultation gratuite",offre2:"access to the community"}
+    {icon:"assets/control.png",type:"normal training",prix:"40 DT",nbrheure:"4 heures(1 mois)",offre1:"consultation gratuite",offre2:"access to the community",size:"normal"},
+    {icon:"assets/control.png",type:"normal training",prix:"40 DT",nbrheure:"4 heures(1 mois)",offre1:"consultation gratuite",offre2:"access to the community",size:"big"},
+    {icon:"assets/control.png",type:"normal training",prix:"40 DT",nbrheure:"4 heures(1 mois)",offre1:"consultation gratuite",offre2:"access to the community",size:"normal"}
   ]
 }

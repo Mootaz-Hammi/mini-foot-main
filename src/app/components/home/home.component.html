@@ -1,4 +1,4 @@
-<div class="container mw-100">
+<div class="container mw-100 home">
 <div class="row">
     <div class="col-7">
             <div class="hero">
@@ -91,6 +91,7 @@
   </div><!--row pic-->
         </div><!--col -6 -->
         <div class="col-5 allraison">
+            <div class="row">
             <div class="somereasons">
                 <div class="somereasons-header">
                     Some Raisons
@@ -110,19 +111,23 @@
             </div>
         </div>
     </div><!--row raison-->
+</div>
     </div>
 </div><!--raison div-->
 
-<div class="pack">
+<div class="pack container">
+    <div class="row">
     <div class="pack-header">
         <span> ready to Start</span>
         <span class="stroke-text"> training</span>
         <span> with us now</span>
     </div><!--packheader-->
+</div>
+<div class="row">
     <div class="packcard">
         
             <div class="cards" *ngFor="let card of cards">
-                <div class="card-content">
+                <div [ngClass]="card.size=='big' ? 'big' : 'card-content'">
                    <img width="10%" [src]="card.icon" alt="">
                    <span>{{card.type}}</span>
                    <span>{{card.prix}}</span>
@@ -136,9 +141,13 @@
             </div>
         
     </div><!--packcard-->
+</div>
 </div><!--pack-->
 
+
+
 </div><!--container-->
+
 
 
 

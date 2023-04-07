@@ -25,6 +25,7 @@ nav.fixed{
     left: 0;
     right: 0;
     background-color: white;
+    z-index: 3;
 }
 .btnnav{
     margin-left: 50rem;

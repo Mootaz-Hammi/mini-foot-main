@@ -25,3 +25,9 @@
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
 }
+.navbarr{
+    z-index: 5;
+}
+.content{
+    z-index: 3;
+}

@@ -1,0 +1,19 @@
+.footer{
+    background-color: rgb(67, 67, 67);
+    margin-top: 8rem;
+    width: auto;
+    height: 25rem;
+    color: white;
+    text-transform: uppercase;
+    
+}
+.table{
+    color: aliceblue;
+}
+.picture{
+    
+    height: 25rem;
+    background-position: left;
+    background-size: 70%;
+    background-repeat: no-repeat;
+}
