@@ -1,10 +1,25 @@
-<p>events works!</p>
-
-<input type="text" [(ngModel)]="text">
-
-<button (click)="test()">click</button>
-<div class="form-group col-6">
-    <label for="lastName">Phone Number</label>
-    <input [(ngModel)]="phone" type="text" class="form-control" id="phoneNumber" placeholder="Enter your phone number">
+<div class="container mw-100">
+  <div class="row">
+  <div class="events">
+    <div class="matchs" *ngFor="let match of Matchs">
+      <div class="row">
+        <div class="LogoName col-2">
+      <span><img class="col-12" [src]="match.logo" alt=""></span>
+      <span>{{match.team1}} </span>
+          </div>
+     <h1 class="col-1" style=" margin-top: 4.5rem;margin-left: 3rem;"> VS </h1>
+    
+    <div class="LogoName col-2">
+      <span><img class="col-12" [src]="match.logo" alt=""></span>
+      <span>{{match.team2}} </span>
+      </div>
+      <div class="TimeDate col-5">
+      <span>{{match.time}}</span>
+      <span>{{match.date}}</span>
+      <button style="height: 4rem;" class="btn btn-danger lg col-2">Join Now</button>
+    </div>
+    </div>
   </div>
-  {{phone}}
+  </div><!---events-->
+</div><!--row-->
+</div><!--container-->
