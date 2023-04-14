@@ -27,4 +27,15 @@ export class HomeComponent {
     {icon:"assets/control.png",type:"normal training",prix:"40 DT",nbrheure:"4 heures(1 mois)",offre1:"consultation gratuite",offre2:"access to the community",size:"big"},
     {icon:"assets/control.png",type:"normal training",prix:"40 DT",nbrheure:"4 heures(1 mois)",offre1:"consultation gratuite",offre2:"access to the community",size:"normal"}
   ]
+
+  eleves = [
+    {name:"yassin",age:"14"},
+    {name:"mootaz",age:"14"},
+    {name:"ilyes",age:"14"}
+  ]
+
 }
+function saveeleve() {
+  alert("yassin");
+}
+

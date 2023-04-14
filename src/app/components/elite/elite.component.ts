@@ -6,6 +6,7 @@ interface Player {
   categorie : string
 
 }
+
 @Component({
   selector: 'app-elite',
   templateUrl: './elite.component.html',
@@ -27,6 +28,14 @@ interface Player {
 export class EliteComponent {
   categories: string[] = ['ecole', 'minime', 'cadet', 'junior'];
   selectedCategorie: string = '';
+
+  BestPlayers:Player[]=[ 
+    {image:"assets/top.jpg", name: 'Mootez Hammi', categorie: 'eCole'},
+    {image:"assets/bw.jpg", name: 'Gaith Abidi', categorie: 'minime'},
+    {image:"assets/cap.jpg", name: 'Morta Aouadi', categorie: 'cadet'}
+  ]
+
+  
   players: Player[] = [
     {image:"assets/top.jpg", name: 'Mootez Hammi', categorie: 'eCole'},
     {image:"assets/bw.jpg", name: 'Steph Curry', categorie: 'minime'},
@@ -46,7 +55,5 @@ export class EliteComponent {
  get filteredPlayers() {
   return this.selectedCategorie.toUpperCase() ? this.players.filter(player => player.categorie.toUpperCase() === this.selectedCategorie.toUpperCase()) : this.players;
 }
- 
-  
  
 }

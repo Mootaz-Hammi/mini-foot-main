@@ -69,11 +69,11 @@ export class RegisterComponent {
     }else alert("fasle")
   }
   test(){
-    alert(this.myForm.get('firstName')?.value);
-    alert(this.myForm.get('lastName')?.value);
-    alert(this.myForm.get('email')?.value);
-    alert(this.myForm.get('phoneNumber')?.value);
-    alert(this.myForm.get('password')?.value);
-    alert(this.myForm.get('confirmPassword')?.value);
+    console.log(this.myForm.get('firstName')?.value);
+    console.log(this.myForm.get('lastName')?.value);
+    console.log(this.myForm.get('email')?.value);
+    console.log(this.myForm.get('phoneNumber')?.value);
+    console.log(this.myForm.get('password')?.value);
+    console.log(this.myForm.get('confirmPassword')?.value);
   }
 }

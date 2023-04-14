@@ -1,6 +1,22 @@
-<div class="container mw-100">
+<div class="container">
+  <div class="row">
+    <div class="thebest"></div>
+    <div class="bestplayersheader">
+      the best players of the last season
+    </div>
+    <div class="bestplayers">
+      
+      <div class="players" *ngFor="let bestplayer of BestPlayers">
+        <span><img src="{{bestplayer.image}}" alt=""></span>
+        <span>{{bestplayer.name}}</span>
+      </div>
+   </div>
+  </div>
+</div>
+<br>
+
+<div class="container mw-100"><!--old elite-->
 <div class="form-group">
-    <label for="exampleFormControlSelect1">categorie</label>
     <select [(ngModel)]="selectedCategorie" class="form-control" id="exampleFormControlSelect1" >
         {{selectedCategorie}}
       <option value="">All Categorie</option>
@@ -36,4 +52,4 @@
           </div><!--div row-->
         </li>
       </ul>
-    </div>
+    </div><!--old elite end-->

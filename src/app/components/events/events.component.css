@@ -1,0 +1,39 @@
+.events{  
+        /* background: linear-gradient(135deg, orange 60%, cyan);     */
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+}
+.matchs{
+    background: linear-gradient(135deg, rgb(9, 69, 122) 40%, rgb(255, 255, 0));  
+    display: flex;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    align-items: center;  
+    margin-left: 2rem; 
+    
+   
+}
+.LogoName{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+/* .LogoName>span:nth-child(1){ /*logo team
+   width: 100px;
+} */
+.LogoName>span:nth-child(2){ /*name team*/
+   color: white;
+}
+.TimeDate{
+    color: white;
+    display: flex;
+    gap: 5rem;
+   justify-content: right;
+   align-items: center;
+   font-size: 3rem;
+    
+}

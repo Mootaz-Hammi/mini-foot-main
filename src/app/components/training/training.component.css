@@ -1,3 +1,11 @@
 ::-webkit-scrollbar{
     display: none;
 }
+.TrainingBackground{
+    width: 100%;
+    height: 43rem;
+    background-image: url(../../../assets/training.png);
+    background-size: 100%;
+    background-position-y: bottom;
+    
+}
