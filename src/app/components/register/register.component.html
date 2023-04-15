@@ -1,8 +1,8 @@
 <div class="container mw-100">
   <div class="formulaire">
-<form [formGroup]="myForm">
+<form #f="ngForm" (ngSubmit)="add(f)">
     <div class="row">
-      <div style="background-image: url(../../../assets/ops.jpg);background-repeat: no-repeat;background-size: 90%;background-position: center;" class="col-6">
+      <div style="background-image: url(../../../assets/ops.jpg);background-repeat: no-repeat;background-size: 90%;background-position: center;" class="col-5">
         <!-- <img class="col-12" src="assets/ops.jpg" alt=""> -->
         
         </div>
@@ -21,71 +21,87 @@
           </div>  
             <div class="col-12">
           <div class="mb-2 text-center justify-content-center">
-            <img class="rounded-circle" [src]="url" width="150" height="150" alt="" (click)="selectFile($event)"><br>
+            <img class="rounded-circle" [src]="url" width="150" height="150" alt="" (click)="selectFile($event)">
+            <br>
             <button class="btn btn-outline-info" (click)="onFilePickerClick()">Select Image</button>
           </div></div>
             
         
-            <br>
+            
         </div>
-        <br>
+        
     <div class="form-group col-6">
         <label for="firstName">First Name</label>
-        <input  type="text" class="form-control" formControlName="firstName" id="firstName"  placeholder="Enter your first name">
-      {{fn}}
+        <input ngModel required minlength="3" #firstName="ngModel" type="text" class="form-control mb-2"  name="firstName" id="firstName"  placeholder="Enter your first name" >
+      <div class="alert alert-danger p-1" *ngIf="firstName.invalid && firstName.touched">
+          Ce champ est obligatoire
+      </div>
       </div>
       
       <div class="form-group col-6">
         <label for="lastName">Last Name</label>
-        <input type="text" class="form-control" formControlName="lastName" id="lastName" placeholder="Enter your last name">
+        <input ngModel required minlength="3" #lastName="ngModel" type="text" class="form-control mb-2" name="lastName" id="lastName" placeholder="Enter your last name">
+        <div class="alert alert-danger p-1" *ngIf="lastName.invalid && lastName.touched">
+          Ce champ est obligatoire
+      </div>
       </div>
     </div>
-      <br>
+      
       <div class="form-group">
         <label for="email">Email Address</label>
-        <input type="email" class="form-control" formControlName="email" id="email"  placeholder="Enter your email address">
+        <input ngModel required email #email="ngModel" type="email" class="form-control mb-2" name="email" id="email"  placeholder="Enter your email address">
+        <div class="alert alert-danger p-1" *ngIf="email.invalid && email.touched">
+          Saisir Email
       </div>
-      <br>
+      </div>
+      
       <div class="form-group">
-        <label for="exampleFormControlSelect1">categorie</label>
-        <select class="form-control" id="exampleFormControlSelect1">
-          <option value="">Select Categorie</option>
-          <option [value]=categorie *ngFor="let categorie of categories">{{categorie | uppercase}}</option>
-          
-          
-        </select></div>
-      <br>
+        <label for="categorie">Categorie</label>
+        <select [ngModel]="defaultSection" name="categorie" class="form-control mb-2" id="categorie">
+          <option [value]="categorie"  *ngFor="let categorie of categories">{{categorie}}</option>
+        </select>
+      
+      </div>
+      
       <div class="row">
         <div class="form-group col-6">
           <label for="region">region</label>
-          <select class="form-control" id="region">
+          <select class="form-control mb-2" id="region">
             <option>+216</option>
             
           </select></div>
         <div class="form-group col-6">
           <label for="phoneNumber">Phone Number</label>
-          <input  type="number" class="form-control" formControlName="phoneNumber" id="phoneNumber" placeholder="Enter your phone number">
+          <input ngModel required minlength="7" #phoneNumber="ngModel" type="number" class="form-control mb-2 " name="phoneNumber" id="phoneNumber" placeholder="Enter your phone number">
+          <div class="alert alert-danger p-1"  *ngIf="phoneNumber.invalid && phoneNumber.touched">
+            Ce champ est obligatoire
+        </div>
         </div>
         
       </div>
-      <br>
+      
       <div class="row">
       <div class="form-group col-6">
         <label for="password">Password</label>
-        <input type="password" class="form-control" formControlName="password" id="password"  placeholder="Enter your password">
-      
+        <input ngModel required minlength="6" #password="ngModel" type="password" class="form-control mb-2" name="password" id="password" placeholder="Enter your password">
+        <div class="alert alert-danger p-1" *ngIf="password.invalid && password.touched">
+          Ce champ est obligatoire
+      </div>
         
       </div>
-      <br>
+      
       <div class="form-group col-6">
         <label for="confirmPassword">Confirm Password</label>
-        <input type="password" class="form-control" formControlName="confirmPassword" id="confirmPassword"  placeholder="Confirm your password">
+        <input ngModel required minlength="6" #confirmPassword="ngModel" type="password" class="form-control mb-2 " name="confirmPassword" id="confirmPassword" placeholder="Confirm your password">
+        <div class="alert alert-danger p-1" *ngIf="confirmPassword.invalid && confirmPassword.touched">
+          Ce champ est obligatoire
       </div>
-      <br>
+      </div>
+      
       <div class="form-group mt-2">
-        <br>
-      <button  class="btn btn-success col-6" (click)="test()">Register</button>
-      <button type="submit" class="btn btn-danger col-6" (click)="register()">Cancel</button>
+        
+      <button type="submit"  class="btn btn-success col-6" >Register</button>
+      <button type="click" class="btn btn-danger col-6" >Cancel</button>
        
     </div>
     </div>

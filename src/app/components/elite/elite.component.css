@@ -1,13 +1,13 @@
 .thebest{
     background-color: orange;
-    height: 32rem;
+    height: 31.3rem;
     z-index: -1;
     position: absolute;
     right: 0rem;
 }
 .bestplayersheader{
     font-weight: bolder;
-    font-size: 4rem;
+    font-size: 3.5rem;
     align-items: center;
     justify-content: center;
     display: flex;

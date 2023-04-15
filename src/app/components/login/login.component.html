@@ -1,5 +1,5 @@
 <div class="container mw-100">
-<form>
+<form #f="ngForm" (ngSubmit)="add(f)">
     <div class="row border">
       <div style="background-image: url(../../../assets/bw.jpg);height: 44rem;background-size: cover;" class="col-6">
       </div>
@@ -7,19 +7,29 @@
       <br>
       <div class="form-group">
         <label for="email">Email Address</label>
-        <input type="email" class="form-control" id="email"  placeholder="Enter your email address">
+        <input #email="ngModel" ngModel required email minlength="5" type="email" class="form-control" id="email" name="email"  placeholder="Enter your email address">
+          <div class="alert alert-danger p-1" *ngIf="email.invalid && email.touched">
+            Saisir votre email
+          </div>
       </div>
       <br>
       <div class="row">
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" class="form-control" id="password"  placeholder="Enter your password">
+        <input #password="ngModel" ngModel required minlength="6" name="password" type="password" class="form-control" id="password"  placeholder="Enter your password">
+        <div class="alert alert-danger p-1" *ngIf="password.invalid && password.touched">
+          Saisir votre Password
+        </div>
+        
       </div>
       <br><br>
       <div class="form-group">
         <br>
         <label for="confirmPassword">Confirm Password</label>
-        <input type="password" class="form-control" id="confirmPassword"  placeholder="Confirm your password">
+        <input name="confirmPassword" #confirmPassword="ngModel" ngModel required minlength="6" type="password" class="form-control" id="confirmPassword"  placeholder="Confirm your password">
+        <div class="alert alert-danger p-1" *ngIf="confirmPassword.invalid && confirmPassword.touched">
+          Saisir votre Password
+        </div>
       </div>
       <br>
       <div class="form-group">

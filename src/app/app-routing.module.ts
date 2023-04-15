@@ -21,7 +21,8 @@ const myRoutes : Routes=[
   {path:'login',component:LoginComponent},
   {path:'register2',component:Register2Component},
   {path:'login2',component:Login2Component},
-  {path:'starter',component:StarterComponent}
+  {path:'starter',component:StarterComponent},
+  {path:'**', redirectTo:'/'}
   
 ];
 

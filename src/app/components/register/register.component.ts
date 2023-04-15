@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, NgForm } from '@angular/forms';
 import { first } from 'rxjs';
 
 @Component({
@@ -12,22 +12,23 @@ export class RegisterComponent {
   url="assets/add.png"
   fn=""
   text=""
+  defaultSection="Select Categorie"
 
-  categories: string[] = ['ecole', 'minime', 'cadet', 'junior'];
+  categories: string[] = ['Select Categorie','Ecole', 'Minime', 'Cadet', 'Junior'];
   
 
-  myForm:FormGroup;
+  // myForm:FormGroup;
   
-  constructor(){
-    this.myForm = new FormGroup({
-      firstName: new FormControl(''),
-      lastName: new FormControl(''),
-      password: new FormControl(''),
-      confirmPassword: new FormControl(''),
-      phoneNumber:new FormControl(''),
-      email:new FormControl('')
-    })
-  }
+  // constructor(){
+  //   this.myForm = new FormGroup({
+  //     firstName: new FormControl(''),
+  //     lastName: new FormControl(''),
+  //     password: new FormControl(''),
+  //     confirmPassword: new FormControl(''),
+  //     phoneNumber:new FormControl(''),
+  //     email:new FormControl('')
+  //   })
+  // }
   
 
   selectFile(event:any){
@@ -60,20 +61,27 @@ export class RegisterComponent {
   }
 
   
-  register(){
-    var password =this.myForm.get('password')?.value
+  // register(){
+  //   var password =this.myForm.get('password')?.value
     
-    var confirmPassword =this.myForm.get('confirmPassword')?.value
-    if(password !== confirmPassword || (password=="")){
-      alert("Verif password")  
-    }else alert("fasle")
-  }
-  test(){
-    console.log(this.myForm.get('firstName')?.value);
-    console.log(this.myForm.get('lastName')?.value);
-    console.log(this.myForm.get('email')?.value);
-    console.log(this.myForm.get('phoneNumber')?.value);
-    console.log(this.myForm.get('password')?.value);
-    console.log(this.myForm.get('confirmPassword')?.value);
+  //   var confirmPassword =this.myForm.get('confirmPassword')?.value
+  //   if(password !== confirmPassword || (password=="")){
+  //     alert("Verif password")  
+  //   }else alert("fasle")
+  // }
+  // test(){
+  //   console.log(this.myForm.get('firstName')?.value);
+  //   console.log(this.myForm.get('lastName')?.value);
+  //   console.log(this.myForm.get('email')?.value);
+  //   console.log(this.myForm.get('phoneNumber')?.value);
+  //   console.log(this.myForm.get('password')?.value);
+  //   console.log(this.myForm.get('confirmPassword')?.value);
+  // }
+  selectedValue:string | undefined;
+  add(f:NgForm){
+    let data = f.value
+    console.log(data);
+    console.log(data.firstName);
+    
   }
 }
