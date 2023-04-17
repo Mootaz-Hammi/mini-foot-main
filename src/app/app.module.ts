@@ -16,8 +16,8 @@ import { StarterComponent } from './components/starter/starter.component';
 import { Register2Component } from './components/register2/register2.component';
 import { Login2Component } from './components/login2/login2.component';
 import { HeaderComponent } from './components/header/header.component';
-
-
+import { HttpClientModule } from '@angular/common/http';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @NgModule({
@@ -40,10 +40,12 @@ import { HeaderComponent } from './components/header/header.component';
     BrowserModule,
     FormsModule,
     Routing,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
+    
     
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

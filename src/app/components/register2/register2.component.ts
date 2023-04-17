@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-register2',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./register2.component.css']
 })
 export class Register2Component {
+  constructor(private service:AuthService){
+
+  }
+
+  signUp(){
+    
+  }
 
 }

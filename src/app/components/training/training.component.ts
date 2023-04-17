@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 interface Player {
   image : string
@@ -13,6 +14,10 @@ interface Player {
   styleUrls: ['./training.component.css']
 })
 export class TrainingComponent {
+  dataArray:any
+  constructor(private service:AuthService){
+    this.service.getAllPlayers().subscribe(data=>this.dataArray=data)
+  }
 
   players: Player[] = [
     {image:"assets/top.jpg", name: 'Mootez Hammi', position: 'Right Back'},

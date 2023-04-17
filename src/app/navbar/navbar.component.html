@@ -6,12 +6,18 @@
       <div class="collapse navbar-collapse" id="navbar">
         <div class="navbar-nav col-10 ml-auto">
           <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+          <div class="auth" style="display: flex; gap: 1rem;" *ngIf="iamIn()">
           <a class="nav-item nav-link" routerLink="training" routerLinkActive="active">Training</a>
           <a class="nav-item nav-link" routerLink="elite" routerLinkActive="active">Elites</a>
           <a class="nav-item nav-link " routerLink="events" routerLinkActive="active">Events</a>
-          
-            <button class="btn btn-success text-right btnnav" routerLink="starter">Get Starter</button>
-            
+        </div>
+          <div *ngIf="!iamIn();else logout">
+            <button  class="btn btn-success text-right btnnav" routerLink="/starter">Get Starter</button>
+          </div>
+            <ng-template #logout>
+              <button  class="btn btn-danger text-right btnnav" (click)="logouts()">Logout</button>
+
+            </ng-template>
             
         </div>
     </div>

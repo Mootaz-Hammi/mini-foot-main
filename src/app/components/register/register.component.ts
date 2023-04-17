@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, NgForm } from '@angular/forms';
 import { first } from 'rxjs';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -8,6 +9,10 @@ import { first } from 'rxjs';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
+
+  constructor(private auth:AuthService){
+
+  }
   phone=""
   url="assets/add.png"
   fn=""
@@ -40,10 +45,7 @@ export class RegisterComponent {
       }
     }
   }
-  sayhi()
-  {
-    this.url="assets/add.png"
-  }
+  
   onFilePickerClick() {
     const input = document.createElement('input');
     input.type = 'file';
@@ -79,9 +81,11 @@ export class RegisterComponent {
   // }
   selectedValue:string | undefined;
   add(f:NgForm){
-    let data = f.value
-    console.log(data);
-    console.log(data.firstName);
-    
+    //console.log(f.value);
+    this.auth.SignupPlayer(f.value).subscribe((data:any)=>{
+      console.log(data)
+      alert(data.msg)
+    }),
+    (error:any)=>{console.log(error)}
   }
 }
