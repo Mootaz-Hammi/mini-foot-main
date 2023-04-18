@@ -36,5 +36,7 @@ export class TrainingComponent {
     {image:"assets/bw.jpg", name: 'Steph Curry', position: 'Point Guard'},
     {image:"assets/cap.jpg", name: 'Kevin Durant', position: 'Power Forward'}
   ];
-
+coachAuthentificated(){
+  return this.service.coachAuthentificated;
+}
 }

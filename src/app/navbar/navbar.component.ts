@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,15 +11,14 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class NavbarComponent implements OnInit {
   private token:string=""
-  constructor(private http: HttpClient,private cookie:CookieService, private route:Router){}
+  constructor(private http: HttpClient,private cookie:CookieService, private route:Router,private auth:AuthService){}
   Logedin :any
   ngOnInit(): void {
-    
-    this.token=JSON.parse(this.cookie.get("token"))
+    console.log("onInit"+this.auth.isAuthenticated)
+    // this.token=JSON.parse(this.cookie.get("token"))
     if(this.token){
-      this.Logedin=true
     }
-    console.log("token"+this.token)
+    
   }
   isFixedNavbar=false;
 
@@ -32,32 +32,20 @@ onWindowScroll() {
   //   if(this.token){
     logouts() {
       const headers = new HttpHeaders().set('Authorization', 'Bearer ' + this.token);
-      
+        this.auth.isAuthenticated=false
+        localStorage.setItem('isAuthenticated', JSON.stringify(this.auth.isAuthenticated)); localStorage.setItem('isAuthenticated', JSON.stringify(this.auth.isAuthenticated));
         this.cookie.delete('token'); // delete the token cookie
         this.token = "";
-        this.Logedin=false
-        this.iamIn()
+        console.log("logout"+this.auth.isAuthenticated)
+        // this.iamIn()
         this.route.navigateByUrl("/home")
     }
-    setToken(token: string) {
-      this.cookie.set('token', token); // set the token cookie
-      this.token = token;
-    }
-  // logouts() {
-  //   // const headers = new HttpHeaders().set('Authorization', 'Bearer ' + this.token);
-  //   // this.http.post('/api/logout', { headers }).subscribe(() => {
-      
-  //     this.cookie.delete(this.token);
-  //     this.Logedin=false
-  //     this.token=JSON.parse(this.cookie.get("token"))
-  //     this.cookie.delete(this.token)
-  //     console.log(this.Logedin) // delete the token cookie
-  //     // this.token = null;
-  //   // });
-  // }
+   
+ 
   
   iamIn(){
-    return this.Logedin
+    
+    return this.auth.isAuthenticated;  
   }
   
 }

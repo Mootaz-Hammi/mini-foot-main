@@ -21,14 +21,13 @@ export class LoginComponent {
     this.service.LoginPlayer(f.value).subscribe((data:any)=>{
        this.cookie.set("token",JSON.stringify(data))
        this.cookie.set("emailUser",f.value.email)
+       this.service.isAuthenticated=true
+       localStorage.setItem('isAuthenticated', JSON.stringify(this.service.isAuthenticated));
       //  this.token=JSON.parse(this.cookie.get("token"))
        console.log(this.cookie.get("token"))
        this.router.navigateByUrl('/home')
-      //  this.navbar.iamIn()
-       
-       
-      
-      
-    })
+      //  this.navbar.iamIn() 
+    }
+      );console.log("failed")
   }
 }

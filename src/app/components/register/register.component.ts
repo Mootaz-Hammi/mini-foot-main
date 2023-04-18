@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 import { first } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -10,7 +12,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class RegisterComponent {
 
-  constructor(private auth:AuthService){
+  constructor(private auth:AuthService,private cookie:CookieService,private route :Router){
 
   }
   phone=""
@@ -82,9 +84,12 @@ export class RegisterComponent {
   selectedValue:string | undefined;
   add(f:NgForm){
     //console.log(f.value);
-    this.auth.SignupPlayer(f.value).subscribe((data:any)=>{
+    this.auth.SignupPlayer(f.value).subscribe((data:any)=>{    
       console.log(data)
       alert(data.msg)
+      this.route.navigateByUrl("/");
+      this.auth.isAuthenticated=true
+      localStorage.setItem('isAuthenticated', JSON.stringify(this.auth.isAuthenticated));
     }),
     (error:any)=>{console.log(error)}
   }
