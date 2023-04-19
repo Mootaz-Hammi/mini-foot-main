@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 interface Match {
   logo:string
   logo2:string
@@ -14,6 +15,9 @@ interface Match {
 })
 
 export class EventsComponent {
+  constructor(private auth:AuthService){
+
+  }
   text=""
   phone=""
   password=""
@@ -23,13 +27,7 @@ export class EventsComponent {
     {logo:"assets/logo.png",logo2:"assets/logo.png",team1:"etoile",team2:"sfax",time:"13:10",date:"20/20/2020"},
   ];
 
-test(){
-  alert(this.phone)
-}
-register(){
-  alert(this.password)
-}
-verifphone(){
-  alert(this.phone);
+CoachEvent(){
+  return this.auth.coachAuthentificated;
 }
 }

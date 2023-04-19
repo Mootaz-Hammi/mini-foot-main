@@ -7,5 +7,11 @@
     background-image: url(../../../assets/training.png);
     background-size: 100%;
     background-position-y: bottom;
-    
+}
+.Coachbtn{
+    left: 25rem;
+    align-items: end;
+    position: relative;
+    justify-content: end;
+    bottom: 3rem;
 }

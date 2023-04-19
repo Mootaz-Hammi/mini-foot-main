@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
   isAuthenticated: boolean = false;
-  coachAuthentificated : boolean = false;
+  coachAuthentificated : boolean = true;
 
   
   constructor(private http:HttpClient) {

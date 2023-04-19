@@ -1,4 +1,9 @@
 <div class="container mw-100">
+  <div class="row" *ngIf="CoachEvent()">
+    
+      <button style="margin-bottom: 2rem;margin-top: 2rem;justify-content: center; display: flex;margin-left: 5rem;" class="btn btn-success col-11">Add Event</button>
+    
+  </div>
   <div class="row">
   <div class="events">
     <div class="matchs" *ngFor="let match of Matchs">
@@ -17,6 +22,10 @@
       <span>{{match.time}}</span>
       <span>{{match.date}}</span>
       <button style="height: 3rem;" class="btn btn-danger lg col-2">Join Now</button>
+      <div class="coachEdit" *ngIf="CoachEvent()">
+        <button class="btn btn-success lg p-3 col-12" >Edit</button>
+        <button class="btn btn-danger lg p-3 col-12">Remove</button>
+      </div>
     </div>
     </div>
   </div>

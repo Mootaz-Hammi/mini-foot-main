@@ -3,15 +3,17 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
+        
 }
 .matchs{
-    background: linear-gradient(135deg, rgb(9, 69, 122) 40%, rgb(255, 255, 0));  
+    background: linear-gradient(135deg, rgb(123, 162, 123) 40%, rgb(3, 3, 3));  
     display: flex;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 2rem;
     align-items: center;  
     margin-left: 2rem; 
+    
     
    
 }
@@ -31,7 +33,7 @@
 .TimeDate{
     color: white;
     display: flex;
-    gap: 5rem;
+    gap: 2.5rem;
    justify-content: right;
    align-items: center;
    font-size: 3rem;

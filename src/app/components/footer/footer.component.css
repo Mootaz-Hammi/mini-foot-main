@@ -18,3 +18,21 @@
     background-size: 70%;
     background-repeat: no-repeat;
 }
+.information{
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    gap: 2rem;
+    margin-top: 6rem;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.social-media{
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    gap: 2rem;
+    margin-top: 7rem;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 10rem;
+}
