@@ -1,5 +1,5 @@
 <div class="container mw-100">
-<form>
+<form #f2="ngForm" (ngSubmit)="add(f2)">
     <div class="row">
       <div class="col-6" style="background-image: url(../../../assets/coach2.jpg);height: 44rem;background-size: cover;background-position-y: center;">       
         </div>
@@ -7,13 +7,20 @@
       <br>
       <div class="form-group">
         <label for="email">Email Address</label>
-        <input type="email" class="form-control" id="email"  placeholder="Enter your email address">
+        <input #email="ngModel" ngModel required email minlength="5" name="email" type="email" class="form-control" id="email"  placeholder="Enter your email address">
+        <div class="alert alert-danger p-1" *ngIf="email.invalid && email.touched">
+          Saisir votre email
+        </div>
       </div>
       <br>
     <div class="row">
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" class="form-control" id="password"  placeholder="Enter your password">
+        
+        <input #password="ngModel" ngModel required minlength="6" name="password" type="password" class="form-control" id="password"  placeholder="Enter your password">
+        <div class="alert alert-danger p-1" *ngIf="password.invalid && password.touched">
+          Saisir votre email
+        </div>
       </div>
       <br><br>
       <div class="form-group">

@@ -26,6 +26,7 @@ export class LoginComponent {
       //  this.token=JSON.parse(this.cookie.get("token"))
        console.log(this.cookie.get("token"))
        this.router.navigateByUrl('/home')
+       
       //  this.navbar.iamIn() 
     }
       );console.log("failed")

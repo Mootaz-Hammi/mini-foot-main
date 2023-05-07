@@ -37,20 +37,21 @@ export class EliteComponent {
 
   
   players: Player[] = [
+    
     {image:"assets/top.jpg", name: 'Mootez Hammi', categorie: 'eCole'},
-    {image:"assets/bw.jpg", name: 'Steph Curry', categorie: 'minime'},
-    {image:"assets/cap.jpg", name: 'Kevin Durant', categorie: 'cadet'},
+    {image:"assets/bw.jpg", name: 'Gaith Abidi', categorie: 'minime'},
+    {image:"assets/cap.jpg", name: 'Morta Aouadi', categorie: 'cadet'},
     
     {image:"assets/ops.jpg", name: 'Mootez Hammi', categorie: 'juNior'},
-    {image:"assets/jump.jpg", name: 'Steph Curry', categorie: 'ecole'},
+    {image:"assets/jump.jpg", name: 'Naoures Chaouachi', categorie: 'ecole'},
     {image:"assets/top.jpg", name: 'Mootez Hammi', categorie: 'junior'},
-    {image:"assets/bw.jpg", name: 'Steph Curry', categorie: 'minime'},
-    {image:"assets/cap.jpg", name: 'Kevin Durant', categorie: 'cadet'},
+    {image:"assets/bw.jpg", name: 'Oussema Darraji', categorie: 'minime'},
+    {image:"assets/cap.jpg", name: 'Saad Bguir', categorie: 'cadet'},
     
     {image:"assets/ops.jpg", name: 'Mootez Hammi', categorie: 'junior'},
-    {image:"assets/jump.jpg", name: 'Steph Curry', categorie: 'ecole'},
-    {image:"assets/jump.jpg", name: 'Steph Curry', categorie: 'cadet'},
-    {image:"assets/cap.jpg", name: 'Kevin Durant', categorie: 'minime'},
+    {image:"assets/jump.jpg", name: 'Med Ben Hammouda', categorie: 'ecole'},
+    {image:"assets/jump.jpg", name: 'Khalil Chamem', categorie: 'cadet'},
+    {image:"assets/cap.jpg", name: 'Yannick Djang', categorie: 'minime'},
  ];
  get filteredPlayers() {
   return this.selectedCategorie.toUpperCase() ? this.players.filter(player => player.categorie.toUpperCase() === this.selectedCategorie.toUpperCase()) : this.players;

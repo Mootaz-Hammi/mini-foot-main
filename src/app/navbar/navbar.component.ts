@@ -33,7 +33,9 @@ onWindowScroll() {
     logouts() {
       const headers = new HttpHeaders().set('Authorization', 'Bearer ' + this.token);
         this.auth.isAuthenticated=false
-        localStorage.setItem('isAuthenticated', JSON.stringify(this.auth.isAuthenticated)); localStorage.setItem('isAuthenticated', JSON.stringify(this.auth.isAuthenticated));
+        localStorage.setItem('isAuthenticated', JSON.stringify(this.auth.isAuthenticated));
+        this.auth.coachAuthentificated=false
+        localStorage.setItem('coachAuthentificated', JSON.stringify(this.auth.coachAuthentificated));
         this.cookie.delete('token'); // delete the token cookie
         this.token = "";
         console.log("logout"+this.auth.isAuthenticated)
@@ -44,8 +46,7 @@ onWindowScroll() {
  
   
   iamIn(){
-    
-    return this.auth.isAuthenticated;  
+     return this.auth.isAuthenticated || this.auth.coachAuthentificated
   }
   
 }

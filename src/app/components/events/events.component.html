@@ -1,9 +1,30 @@
 <div class="container mw-100">
   <div class="row" *ngIf="CoachEvent()">
     
-      <button style="margin-bottom: 2rem;margin-top: 2rem;justify-content: center; display: flex;margin-left: 5rem;" class="btn btn-success col-11">Add Event</button>
-    
+      <button style="margin-bottom: 2rem;margin-top: 2rem;justify-content: center; display: flex;margin-left: 5rem;" class="btn btn-success col-11" (click)="Event()">Add Event</button>
+
   </div>
+  <div class="addEvent container" *ngIf="EventClicked()">
+    <form #f="ngForm" (ngSubmit)="addEvent(f)">
+      <div class="teams row">
+        <div class="team1 col-6">
+      <label for="team1">TEAM 1 NAME</label>
+      <input ngModel required minlength="3" #team1="ngModel" type="text" class="form-control mb-2"  name="team1" id="team1"  placeholder="Enter Team 1 name" >
+      </div><!--team1-->
+      <div class="team2 col-6">
+        <label for="team2">TEAM 2 NAME</label>
+        <input ngModel required minlength="3" #team2="ngModel" type="text" class="form-control mb-2"  name="team2" id="team2"  placeholder="Enter team 2 name" >
+        </div><!--team1-->
+    </div><!--teams-->
+      <div class="date">
+        <label for="date">Date</label>
+      <input ngModel required  #date="ngModel" type="text" class="form-control mb-2"  name="date" id="date"  placeholder="Enter day of event" >
+      <label for="time">Time</label>
+      <input ngModel required  #time="ngModel" type="text" class="form-control mb-2"  name="time" id="time"  placeholder="Enter time of event" >
+     <button class="btn btn-primary mb-5" type="submit">Add Event</button>
+      </div>
+    </form>
+  </div><!--add event-->
   <div class="row">
   <div class="events">
     <div class="matchs" *ngFor="let match of Matchs">

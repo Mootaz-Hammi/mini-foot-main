@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { CookieService } from 'ngx-cookie-service';
 import { AuthService } from 'src/app/services/auth.service';
 interface Match {
   logo:string
@@ -15,7 +17,7 @@ interface Match {
 })
 
 export class EventsComponent {
-  constructor(private auth:AuthService){
+  constructor(private auth:AuthService,private cookie:CookieService){
 
   }
   text=""
@@ -29,5 +31,22 @@ export class EventsComponent {
 
 CoachEvent(){
   return this.auth.coachAuthentificated;
+}
+Event(){
+ this.auth.addEvent = !this.auth.addEvent
+}
+EventClicked(){
+  return this.auth.addEvent
+}
+
+addEvent(f:NgForm){
+  console.log("xx")
+  console.log(f.value);
+  this.auth.addEvents(f.value).subscribe((data:any)=>{    
+    console.log(data)
+    
+
+    }),
+  (error:any)=>{console.log(error)}
 }
 }

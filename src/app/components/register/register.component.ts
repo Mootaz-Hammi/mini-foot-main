@@ -15,10 +15,9 @@ export class RegisterComponent {
   constructor(private auth:AuthService,private cookie:CookieService,private route :Router){
 
   }
-  phone=""
+  
   url="assets/add.png"
-  fn=""
-  text=""
+  
   defaultSection="Select Categorie"
 
   categories: string[] = ['Select Categorie','Ecole', 'Minime', 'Cadet', 'Junior'];
@@ -86,11 +85,13 @@ export class RegisterComponent {
     //console.log(f.value);
     this.auth.SignupPlayer(f.value).subscribe((data:any)=>{    
       console.log(data)
-      alert(data.msg)
-      this.route.navigateByUrl("/");
-      this.auth.isAuthenticated=true
+      
+      
       localStorage.setItem('isAuthenticated', JSON.stringify(this.auth.isAuthenticated));
     }),
-    (error:any)=>{console.log(error)}
+    (error:any)=>{console.log(error)
+      this.route.navigateByUrl("/");
+      this.auth.isAuthenticated=true}
+    
   }
 }

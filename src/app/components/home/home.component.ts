@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+
+  constructor(private http:HttpClient){
+    this.http.get('http://localhost:7000').subscribe(data=>console.log(data))
+  }
   figures=
   [
     {num:60,title:"Players"},
